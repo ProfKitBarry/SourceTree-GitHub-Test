@@ -7,9 +7,12 @@ void setup(){
 
 void draw(){
   background(0);
-  for (int j = 0; j < particles.size(); j++){
+  for (int j = particles.size() - 1; j >= 0; j--){
     particles.get(j).update();
     particles.get(j).display();
+    if (particles.get(j).position.y > height){
+      particles.remove(j);
+    }
   }
   if(mousePressed == true) {
     particles.add(new Particle(mouseX, mouseY));
