@@ -1,5 +1,6 @@
 ArrayList<Particle> particles;
 boolean thisOne = true;
+boolean thisOne;
 
 void setup(){
  size(400,400);
